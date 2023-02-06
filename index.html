@@ -9,44 +9,27 @@
     <title>MUSIC APP</title>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <div class="box">
             <img src="image/img1.jpg" alt="" id="SongImages">
         </div>
-        <audio src="SONG/music1.mp3" id="myAudio"></audio>
+        <!-- <audio src="SONG/music1.mp3" id="myAudio"></audio> -->
+      
         <div class="audiotimeshow"></div>
        <marquee behavior="smooth" direction="left"> <h3 id="songTitle" style="color:rgb(11, 244, 23);">Jitni Dafa Dekhu Tujhe Dhadke Joro se</h3></marquee>
-       <progress id="file" value="0" max="100"></progress>
-       <div class="timeduration">
-        <div id="start">0 s</div>
-        <div id="end">0 s</div>
-       </div>
-        <div class="box">
-            <i class="fa fa-step-backward" style="font-size:48px;color:gray" onclick="PlayPrevSong()"></i>
-            <i class="fa fa-pause" style="font-size:48px;color:gold" onClick="playMyAudio()" id="playMySong"></i>
-            <i class="fa fa-play" style="font-size:48px;color:gold" onClick="StopMyAudio()" id="StopMySong"></i>
-            <i class="fa fa-step-forward" style="font-size:48px;color:gray" onclick="PlayNextSong()" id="NextSong"></i>
+       <!-- <audio controls class="audio">
+       
+        <source src="SONG/music1.mp3" type="audio/mpeg" id="audioTitle">
+        Your browser does not support the audio element.
+      </audio> -->
+      <audio id="audioTitle" controls src="SONG/music1.mp3" class="audio">
+      </audio>
+       <div class="box">
+            <i class="fa fa-step-backward" style="font-size:48px;color:gold" onclick="PlayPrevSong()"></i>
+            <i class="fa fa-step-forward" style="font-size:48px;color:gold" onclick="PlayNextSong()" id="NextSong"></i>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
 
-
-
-<!-- <html>
- <body>
-   <audio src="SONG/music1.mp3" id="myAudio"></audio>
-   <button onClick="playMyAudio()">Play Audio</button>
-   <button onClick="StopMyAudio()">Stop</button>
-   <script>
-     function playMyAudio(){
-       document.getElementById("myAudio").play();
-     }
-     function StopMyAudio(){
-       document.getElementById("myAudio").pause();
-     }
-
-   </script>
- </body>
-</html> -->
